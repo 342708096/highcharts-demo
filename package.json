@@ -1,0 +1,22 @@
+{
+  "name": "highcharts-demo",
+  "version": "0.0.1",
+  "author": {
+    "name": "Tony Zhu",
+    "email": "342708096@qq.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MetaCDN/videojs-vr"
+  },
+  "main": "src/js/videojs.vr.js",
+  "scripts": {
+    "start": "browser-sync start --server --files *.*"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.11"
+  }
+}

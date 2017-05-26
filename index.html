@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<title>highcharts-demo</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="highcharts/highcharts.js"></script>
+    <script src="highcharts/map.js"></script>
+</head>
+
+<body style="padding: 30px">
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+            <h3 class="panel-title">直播概览</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-2">
+                <h5>PV(观看次数)</h5>
+                <p>
+                    2051
+                </p>
+            </div>
+            <div class="col-md-2">
+                <h5>独立IP数</h5>
+                <p>
+                    1203
+                </p>
+            </div>
+            <div class="col-md-2">
+                <h5>峰值IP数</h5>
+                <p>
+                    1183
+                </p>
+            </div>
+            <div class="col-md-2">
+                <h5>累计观看时长</h5>
+                <p>
+                    7
+                </p>
+            </div>
+            <div class="col-md-2">
+                <h5>平均观看时长</h5>
+                <p>
+                    196:34:00
+                </p>
+            </div>
+            <div class="col-md-2">
+                <h5>PV(观看次数)</h5>
+                <p>
+                    00:09:48
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+            <h3 class="panel-title">地区分布</h3>
+        </div>
+        <div class="panel-body">
+            <div id="area-distribution-container"></div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+            <h3 class="panel-title">终端分布</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="container1"></div>
+                </div>
+                <div class="col-md-6">
+                    <div id="container2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+            <h3 class="panel-title">详细流水</h3>
+        </div>
+        <div class="panel-body">
+            <table id="detail-table" class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            时间
+                        </th>
+                        <th>
+                            类型
+                        </th>
+                        <th>
+                            IP
+                        </th>
+                        <th>
+                            省份
+                        </th>
+                        <th>
+                            城市
+                        </th>
+                        <th>
+                            设备
+                        </th>
+                        <th>
+                            APP
+                        </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="map.js"></script>
+<script src="char.js"></script>
+<script src="detail.js"></script>
+</body>
+</html>
