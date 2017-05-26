@@ -50,6 +50,10 @@ $(function () {
                     format: '{point.name}'
                 }
             }],
+            legend: {
+              align: 'left',
+              layout: 'vertical'
+            },
             credits: {enabled: false}
         });
     });
