@@ -51,8 +51,10 @@ $(function () {
                 }
             }],
             legend: {
-              align: 'left',
-              layout: 'vertical'
+                align: 'left',
+                reversed: false,
+                layout: 'vertical',
+                verticalAlign: 'middle'
             },
             credits: {enabled: false}
         });
