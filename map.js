@@ -49,7 +49,8 @@ $(function () {
                     enabled: true,
                     format: '{point.name}'
                 }
-            }]
+            }],
+            credits: {enabled: false}
         });
     });
 });

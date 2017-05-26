@@ -37,7 +37,8 @@ $(function () {
                 ['IOS',    18],
                 ['其他',   0.7]
             ]
-        }]
+        }],
+        credits: {enabled: false}
     });
 
 
@@ -80,6 +81,7 @@ $(function () {
                 ['Opera',     6.2],
                 ['其他',   0.7]
             ]
-        }]
+        }],
+        credits: {enabled: false}
     });
 });
