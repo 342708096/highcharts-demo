@@ -1,4 +1,4 @@
-$(function () {
+function setPlatformWeight(data) {
     $('#container1').highcharts({
         chart: {
             plotBackgroundColor: null,
@@ -25,23 +25,12 @@ $(function () {
         series: [{
             type: 'pie',
             name: '设备访问量占比',
-            data: [
-                ['Windows',   45.0],
-                ['Mac',       26.8],
-                {
-                    name: 'Android',
-                    y: 12.8,
-                    sliced: true,
-                    selected: true
-                },
-                ['IOS',    18],
-                ['其他',   0.7]
-            ]
+            data: data
         }],
         credits: {enabled: false}
     });
-
-
+}
+function setBrowserWeight(data){
     $('#container2').highcharts({
         chart: {
             plotBackgroundColor: null,
@@ -68,20 +57,8 @@ $(function () {
         series: [{
             type: 'pie',
             name: '浏览器访问量占比',
-            data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
-                {
-                    name: 'Chrome',
-                    y: 12.8,
-                    sliced: true,
-                    selected: true
-                },
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['其他',   0.7]
-            ]
+            data: data
         }],
         credits: {enabled: false}
     });
-});
+};

@@ -1,26 +1,26 @@
-$(function () {
+function setAreaWeight(data) {
     // Prepare random data
-    var data = [
-        {
-            "name": "浙江",
-            "value": 728
-        },
-        {
-            "name": "福建",
-            "value": 710
-        },
-        {
-            "name": "广东",
-            "value": 963
-        },
-        {
-            "name": "湖北",
-            "value": 541
-        },{
-            name: "湖南",
-            value: 122
-        }
-    ];
+    // var data = [
+    //     {
+    //         "name": "浙江",
+    //         "value": 728
+    //     },
+    //     {
+    //         "name": "福建",
+    //         "value": 710
+    //     },
+    //     {
+    //         "name": "广东",
+    //         "value": 963
+    //     },
+    //     {
+    //         "name": "湖北",
+    //         "value": 541
+    //     },{
+    //         name: "湖南",
+    //         value: 122
+    //     }
+    // ];
     $.getJSON('area-distribution.json', function (geojson) {
         // Initiate the chart
         $('#area-distribution-container').highcharts('Map', {
@@ -59,4 +59,4 @@ $(function () {
             credits: {enabled: false}
         });
     });
-});
+}
