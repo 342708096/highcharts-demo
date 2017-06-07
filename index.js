@@ -2,7 +2,7 @@
     const baseUrl = 'http://localhost:8000/api/';
 
     $.get({ url: baseUrl + 'summary' , context: window.document.body, success: (
-        {visitTimes, ipCount, peakIpCount, totalDuration, averageDuration, platformWeight, browserWeight, areaWeight}) => {
+        {visitTimes, ipCount, peakIpCount, totalDuration, averageDuration, platformWeight, browserWeight, areaWeight, onlineData}) => {
         $('#visitTimes').html(visitTimes);
         $('#ipCount').html(ipCount);
         $('#peakIpCount').html(peakIpCount);
@@ -23,16 +23,20 @@
         function formatAreaWeight(weight){
             return weight.map(({_id, count}) => ({name: _id, value: count}));
         }
+        function formatOnlineData(data){
+            return data.map(({date, count}) => ([new Date(date).getTime() - new Date().getTimezoneOffset() * 60000, count]));
+        }
         window.setPlatformWeight(formatWeight(platformWeight));
         window.setBrowserWeight(formatWeight(browserWeight));
         window.setAreaWeight(formatAreaWeight(areaWeight));
+        window.setOnlineTimeLine(formatOnlineData(onlineData));
     }});
 
 
 
     $.get({ url: baseUrl + 'enter' , context: window.document.body, success: function(details){
         const detailDOM = details.map((data) =>
-            `<tr><td>${data.begin}</td>
+            `<tr><td>${new Date(new Date(data.begin)).toLocaleString()}</td>
                 <td>${data.type}</td>
                 <td>${data.ip}</td>
                 <td>${data.region}</td>
